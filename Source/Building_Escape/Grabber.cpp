@@ -34,17 +34,19 @@ void UGrabber::BeginPlay()
 	{
 		UE_LOG(LogTemp, Error, TEXT("No physics handle component found on %s"), *GetOwner()->GetName());
 	}
-
+	
 	InputComponent = GetOwner()->FindComponentByClass<UInputComponent>();
+	
 	if (InputComponent)
 	{
-		UE_LOG(LogTemp,Warning,TEXT("Input component found on: %s"), GetOwner()->GetName());
+		UE_LOG(LogTemp,Warning,TEXT("Input component found"), GetOwner()->GetName());
 	}
 	else
 	{
 		UE_LOG(LogTemp,Warning,TEXT("Input component missing"), GetOwner()->GetName());
 	}
 }
+
 
 
 // Called every frame
