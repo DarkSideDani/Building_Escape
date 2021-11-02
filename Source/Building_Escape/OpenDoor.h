@@ -34,7 +34,7 @@ private:
 	float CurrentYaw;
 
 	UPROPERTY(EditAnywhere)
-	float MassToOpenDoors = 50.f;
+	float MassToOpenDoors = 40.f;
 	
 	UPROPERTY(EditAnywhere)
 	float OpenAngle = 90.0f;
