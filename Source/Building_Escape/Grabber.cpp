@@ -51,10 +51,11 @@ void UGrabber::Grab()
 {
 	FHitResult HitResult = GetFirstPhysicsBodyInReach();
 	UPrimitiveComponent* ComponentToGrab = HitResult.GetComponent();
+	AActor* ActorHit = HitResult.GetActor();
 	
 	// If we hit something than attach the physics handle.
-	if (HitResult.GetActor())
-	{
+	if (ActorHit)
+	{	if(!PhysicsHandle) {return;}
 			PhysicsHandle->GrabComponentAtLocation
 		(
 			ComponentToGrab,
